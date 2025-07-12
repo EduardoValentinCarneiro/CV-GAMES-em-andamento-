@@ -55,7 +55,6 @@ h2 {
   color: #333;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
-  overflow: hidden;
 }
 
 .jogo-item:hover,
@@ -79,10 +78,9 @@ h2 {
 .download-item p {
   font-weight: bold;
   margin: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
-/* Oculta texto ao passar o mouse */
 .download-item:hover p {
   opacity: 0;
 }
@@ -148,7 +146,7 @@ iframe {
   height: 100%;
 }
 
-/* Rodapé fino */
+/* Rodapé sempre ao final da página, ainda mais fino */
 .rodape {
   text-align: center;
   padding: 4px 8px;
@@ -158,7 +156,7 @@ iframe {
   margin-top: auto;
 }
 
-/* Botão de Baixar (visível ao passar o mouse) */
+/* Botão de Baixar */
 .botao-baixar {
   position: absolute;
   bottom: 10px;
@@ -179,7 +177,7 @@ iframe {
   opacity: 1;
 }
 
-/* Botão no topo */
+/* Botão de navegação no topo */
 .botao-download {
   background-color: #007bff;
   color: white;
@@ -193,7 +191,7 @@ iframe {
   background-color: #0056b3;
 }
 
-/* Topo do site com logo e título */
+/* Topo do site com logo e título menor */
 .topo-site {
   display: flex;
   justify-content: space-between;
@@ -218,4 +216,39 @@ iframe {
 .topo-site h1 {
   margin: 0;
   font-size: 1.4rem;
+}
+
+/* Responsividade para celular */
+@media screen and (max-width: 600px) {
+  .topo-site {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .botao-download {
+    align-self: flex-end;
+  }
+
+  .galeria-jogos,
+  .galeria-downloads {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    padding: 20px;
+    gap: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .jogo-item img,
+  .download-item img {
+    height: 100px;
+  }
+
+  .topo-site h1 {
+    font-size: 1.2rem;
+  }
 }
