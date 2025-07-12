@@ -82,7 +82,6 @@ h2 {
   transition: opacity 0.3s;
 }
 
-/* Oculta texto ao passar o mouse */
 .download-item:hover p {
   opacity: 0;
 }
@@ -148,7 +147,7 @@ iframe {
   height: 100%;
 }
 
-/* Rodapé fino */
+/* Rodapé */
 .rodape {
   text-align: center;
   padding: 4px 8px;
@@ -158,7 +157,7 @@ iframe {
   margin-top: auto;
 }
 
-/* Botão de Baixar (visível ao passar o mouse) */
+/* Botão de Baixar */
 .botao-baixar {
   position: absolute;
   bottom: 10px;
@@ -179,7 +178,7 @@ iframe {
   opacity: 1;
 }
 
-/* Botão no topo */
+/* Botão de navegação */
 .botao-download {
   background-color: #007bff;
   color: white;
@@ -193,7 +192,7 @@ iframe {
   background-color: #0056b3;
 }
 
-/* Topo do site com logo e título */
+/* Topo com logo e título */
 .topo-site {
   display: flex;
   justify-content: space-between;
