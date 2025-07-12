@@ -233,9 +233,17 @@ iframe {
 
   .galeria-jogos,
   .galeria-downloads {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
     padding: 20px;
     gap: 15px;
+  }
+
+  .jogo-item,
+  .download-item {
+    width: 90%;
+    max-width: 300px;
   }
 
   h2 {
